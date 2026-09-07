@@ -12,49 +12,60 @@ Website restoran - menu makanan dan pemesanan online yang menggugah selera.
 
 ![Home](assets/screenshots/home.png)
 
-## Fitur
-
-- Halaman beranda dengan hero
-- Halaman menu (menu.php)
-- Pemesanan online (pesan.php)
-- Galeri makanan
-- Responsive design
-
 ## Teknologi
 
-- **PHP** - Bahasa pemrograman server-side
-- **MySQL / JSON** - Penyimpanan data
-- **Bootstrap 5** - Styling & responsive
-- **HTML5 + CSS3 + JavaScript** - Front-end
+**Backend**
+- PHP 8.x - server-side scripting
+- Order module (menu, pemesanan)
+- API endpoint untuk data menu & order
+- JSON-file based data storage
+
+**Frontend**
+- HTML5, CSS3, JavaScript (ES6+)
+- Bootstrap 5 responsive
+- Fetch API untuk data dinamis
+- Animasi & hero section menarik
+
+**Database**
+- JSON file storage - portable
+
+**Tooling & DevOps**
+- Git & GitHub
+- Laragon/WAMP
+
+## Arsitektur
+
+- **Front-end first** - hanya berisi tampilan depan (public UI)
+- Layout modular (folder includes, assets, data)
+- Keamanan: input sanitization, validation, dan prepared query
+- Data berbasis file (JSON) - mudah di-deploy tanpa database server
 
 ## Quick Start
 
 Prasyarat: [Laragon](https://laragon.org) / [XAMPP](https://www.apachefriends.org)
 
-1. Clone repository ke folder laragon/www/ atau htdocs/:
+1. Clone repository:
 
-   `ash
+   ```bash
    git clone https://github.com/Celieln/portofolio-food-web.git
-   `
+   ```
 
-2. Jalankan server Apache. Buka http://localhost/portofolio-food-web.
-
-3. Selesai! Website siap digunakan.
+2. Letakkan folder di `laragon/www/` atau `htdocs/`.
+3. Buka `http://localhost/portofolio-food-web`.
 
 ## Struktur Proyek
 
-`
-food-web/
-  assets/          # CSS, JS, gambar, screenshot
-  includes/        # Komponen yang di-include (header, footer, dll)
-  data/            # File data (JSON)
-  index.php        # Halaman utama
-  *.php            # Halaman lainnya
-`
+```
+portofolio-food-web/
+  assets/      # CSS, JS, gambar, screenshot
+  includes/    # Komponen header, footer, dll
+  data/        # File data (JSON)
+  *.php        # Halaman tampilan depan
+```
 
 ## Kontribusi
 
-Kontribusi sangat diterima! Silakan baca [CONTRIBUTING](CONTRIBUTING.md) untuk panduan, atau buka [Issues](https://github.com/Celieln/portofolio-food-web/issues) untuk melaporkan bug / request fitur.
+Kontribusi sangat diterima! Baca [CONTRIBUTING](CONTRIBUTING.md) dan buka [Issues](https://github.com/Celieln/portofolio-food-web/issues).
 
 ## Lisensi
 
